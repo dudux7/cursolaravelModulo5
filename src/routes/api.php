@@ -5,6 +5,7 @@ use App\Http\Controllers\explorerController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+
 Route::post('/explorer', [explorerController::class, 'store']);
 
 

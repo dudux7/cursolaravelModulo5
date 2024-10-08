@@ -12,13 +12,14 @@ class explorerController extends Controller
         $explorer = $request->validate([
             'name' => 'required',
             'age' => 'required|numeric',
-            'longitude' => 'required',
-            'latitude' => 'required',
+            'longitude' => 'required|numeric',
+            'latitude' => 'required|numeric',
         ]);
-        
+
         $explorerSave = explorer::create($explorer);
 
         return response()->json($explorerSave);
     }
+
 
 }
