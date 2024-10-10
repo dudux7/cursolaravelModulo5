@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\explorer;
+use App\Models\Explorer;
 
-class item extends Model
+class Item extends Model
 {
     use HasFactory;
 
@@ -15,10 +15,10 @@ class item extends Model
         'valor',
         'latitude',
         'longitude',
-        'explorers_id',
+        'explorer_id',
     ];
 
-    public function pessoa() {
-        return $this->belongsTo(explorer::class);
+    public function explorer() {
+        return $this->belongsTo(Explorer::class);
         }
 }

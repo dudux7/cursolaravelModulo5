@@ -17,8 +17,8 @@ return new class extends Migration
             $table->float('valor');
             $table->float('latitude');
             $table->float('longitude');
-            $table->unsignedBigInteger('explorers_id');
-            $table->foreign('explorers_id')->references('id')->on('explorers');
+            $table->unsignedBigInteger('explorer_id');
+            $table->foreign('explorer_id')->references('id')->on('explorers');
             $table->timestamps();
         });
     }

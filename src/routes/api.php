@@ -14,4 +14,4 @@ Route::post('Explorer', [ExplorerController::class, 'store']);
 Route::get('Explorer/{id}', [ExplorerController::class, 'show']);
 Route::put('Explorer/{id}', [ExplorerController::class, 'update']);
 Route::post('Explorer/Item', [ItemController::class, 'store']);
-
+Route::post('Explorer/ExchangeItems', [ItemController::class, 'exchangeItems']);

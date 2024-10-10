@@ -22,12 +22,17 @@ class ExplorerController extends Controller
 
     public function show($id) {
         $explorer = Explorer::find($id);
+        //$explorer = Explorer::with('items')->find($id);
+
 
         if (!$explorer) {
             return response()->json(['erro' => 'explorer não encontrado'], 404);
         }
 
-        return response()->json($explorer);
+        return response()->json([
+            'explorer' => $explorer,
+            'items' => $explorer->items
+        ]);
     }
 
     public function update(Request $request, $id) {

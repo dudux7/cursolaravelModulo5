@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Item;
 
 class Explorer extends Model
 {
@@ -14,4 +15,8 @@ class Explorer extends Model
         'latitude',
         'longitude',
     ];
+
+    public function items() {
+        return $this->hasMany(Item::class);
+    }
 }
